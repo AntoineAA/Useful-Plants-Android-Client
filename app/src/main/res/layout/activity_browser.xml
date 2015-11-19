@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.tic.floris.floristic.BrowserActivity">
+
+    <!-- The main content view -->
+    <RelativeLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layout_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btn_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/button_default"
+                android:drawableLeft="@drawable/ic_action_refresh_dark"
+                android:drawableStart="@drawable/ic_action_refresh_dark"
+                android:text="@string/button_refresh"
+                android:textColor="@color/dark_grey" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/color_primary"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_drawer_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_action_previous_item"
+                    android:drawableStart="@drawable/ic_action_previous_item"
+                    android:gravity="start|center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/traits"
+                    android:textColor="@color/text_color_primary"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_drawer_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableEnd="@drawable/ic_action_next_item"
+                    android:drawableRight="@drawable/ic_action_next_item"
+                    android:gravity="end|center_vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/filters_sort"
+                    android:textColor="@color/text_color_primary"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipt_to_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/footer">
+
+                <ListView
+                    android:id="@+id/list_species"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="@dimen/default_devider_height"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+            <TextView
+                android:id="@+id/txt_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/textview_rounded"
+                android:gravity="center_vertical|end"
+                android:text="@string/species"
+                android:textColor="@color/text_color_primary" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- The right navigation drawer -->
+    <RelativeLayout
+        android:id="@+id/drawer_right"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginBottom="@dimen/default_card_padding"
+        android:layout_marginTop="@dimen/default_card_padding"
+        android:background="@drawable/drawer_right_default"
+        android:clickable="true"
+        android:paddingBottom="@dimen/default_card_padding"
+        android:paddingTop="@dimen/default_card_padding">
+
+        <Button
+            android:id="@+id/btn_gps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/btn_transparent"
+            android:gravity="end|center_vertical"
+            android:padding="@dimen/default_card_padding"
+            android:text="@string/button_gps_settings"
+            android:textSize="@dimen/btn_drawer_text_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_gps"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/drawer_cat_background"
+                android:padding="@dimen/default_card_padding"
+                android:text="@string/sort"
+                android:textColor="@color/text_color_primary" />
+
+            <Spinner
+                android:id="@+id/spin_sorts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/drawer_cat_background"
+                android:padding="@dimen/default_card_padding"
+                android:text="@string/filters"
+                android:textColor="@color/text_color_primary" />
+
+            <ListView
+                android:id="@+id/list_facet_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/drawer_cat_background"
+                android:padding="@dimen/default_card_padding"
+                android:text="@string/geography"
+                android:textColor="@color/text_color_primary" />
+
+            <CheckBox
+                android:id="@+id/cb_geography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/nearby_species" />
+
+            <CheckBox
+                android:id="@+id/cb_custom_geography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/search_locality" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- The left navigation drawer -->
+    <LinearLayout
+        android:id="@+id/drawer_left"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:layout_marginBottom="@dimen/default_card_padding"
+        android:layout_marginTop="@dimen/default_card_padding"
+        android:background="@drawable/drawer_left_default"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_card_padding"
+        android:paddingTop="@dimen/default_card_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/drawer_cat_background"
+            android:padding="@dimen/default_card_padding"
+            android:text="@string/currently_have"
+            android:textColor="@color/text_color_primary" />
+
+        <CheckBox
+            android:id="@+id/cb_flowers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flowers" />
+
+        <CheckBox
+            android:id="@+id/cb_fruits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fruits" />
+
+        <CheckBox
+            android:id="@+id/cb_leaves"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/leaves" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/drawer_cat_background"
+            android:padding="@dimen/default_card_padding"
+            android:text="@string/traits"
+            android:textColor="@color/text_color_primary" />
+
+        <ListView
+            android:id="@+id/list_traits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

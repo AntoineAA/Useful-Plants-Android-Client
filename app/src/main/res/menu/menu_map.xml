@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="org.tic.floris.floristic.MapActivity">
+    <item
+        android:id="@+id/action_location_settings"
+        android:orderInCategory="100"
+        android:title="@string/button_gps_settings"
+        app:showAsAction="never" />
+</menu>

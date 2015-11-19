@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.tic.floris.floristic.Views.SquareImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_thumb"
+    android:contentDescription="@string/tab_title_gallery"
+    android:scaleType="centerCrop" />

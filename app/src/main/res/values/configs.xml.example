@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="exception">FlorisTicException</string>
+
+    <string name="api_url">http://example.com</string>
+
+    <string name="api_species">%1$s/species</string>
+    <string name="api_species_count">%1$s/species/count</string>
+    <string name="api_species_get">%1$s/species/</string>
+    <string name="api_species_autocomplete">%1$s/species/autocomplete/</string>
+
+    <string name="api_species_from">from=</string>
+    <string name="api_species_size">size=</string>
+    <string name="api_species_include_facets">include_facets=true</string>
+    <string name="api_species_family">family=</string>
+    <string name="api_species_genus">genus=</string>
+    <string name="api_species_usage_cat">usage_cat=</string>
+    <string name="api_species_usage_type">usage_type=</string>
+    <string name="api_species_project">pnet=</string>
+    <string name="api_species_search">search=</string>
+    <string name="api_species_sort_by">sort_by=</string>
+    <string name="api_species_latitude">latitude=</string>
+    <string name="api_species_longitude">longitude=</string>
+    <string name="api_species_traits">traits[]=</string>
+    <string name="api_species_traits_divider">|</string>
+    <string name="api_species_include_geojson">include_geojson=true</string>
+    <string name="api_species_current_flower">current_flower=true</string>
+    <string name="api_species_current_fruit">current_fruit=true</string>
+    <string name="api_species_current_leaf">current_leaf=true</string>
+
+    <string name="api_species_sort_by_species_label">Species</string>
+    <string name="api_species_sort_by_species_value"></string>
+    <string name="api_species_sort_by_family_label">Family</string>
+    <string name="api_species_sort_by_family_value">family</string>
+    <string name="api_species_sort_by_score_label">Relevance</string>
+    <string name="api_species_sort_by_score_value">score</string>
+
+    <string name="api_image">%1$s/image</string>
+    <string name="api_image_mini">%1$s/image/%2$s/mini/%3$s</string>
+    <string name="api_image_normal">%1$s/image/%2$s/normal/%3$s</string>
+
+    <string name="api_observation">%1$s/observation</string>
+    <string name="api_observation_lat">latitude=%1$s</string>
+    <string name="api_observation_long">longitude=%1$s</string>
+    <string name="api_observation_gbif_key">gbif_key=</string>
+    <string name="api_observation_pnet_id">pnet_id=</string>
+    <string name="api_observation_check">check_only=true</string>
+
+    <string name="wiki_url">http://www.wikipedia.org/wiki/%1$s</string>
+    <string name="wiki_host">wikipedia</string>
+
+    <string name="plantuse_url">http://uses.plantnet-project.org/en/%1$s</string>
+    <string name="plantuse_host">uses.plantnet-project</string>
+
+</resources>

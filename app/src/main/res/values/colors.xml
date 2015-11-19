@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_primary">#5A785A</color>
+    <color name="text_color_primary">#FFFFFF</color>
+
+    <color name="dark_grey">#333333</color>
+    <color name="normal_grey">#888888</color>
+
+    <color name="drawer_background">#F5F5F5</color>
+    <color name="drawer_cat_background">#333333</color>
+
+    <color name="spinner_text">#333333</color>
+    <color name="category_text">#333333</color>
+    <color name="category_text_disabled">#888888</color>
+
+    <color name="color_primary_transparent">#335A785A</color>
+    <color name="color_primary_transparent_darker">#BB5A785A</color>
+
+</resources>

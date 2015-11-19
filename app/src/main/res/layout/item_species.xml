@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="@dimen/default_card_corner"
+        card_view:contentPadding="@dimen/default_card_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/img_thumb"
+                    android:layout_width="@dimen/thumb_species"
+                    android:layout_height="@dimen/thumb_species"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/default_card_padding"
+                    android:layout_marginStart="@dimen/default_card_padding"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/background_thumb"
+                    android:contentDescription="@string/species"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@id/img_thumb"
+                    android:layout_toStartOf="@id/img_thumb"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_grey"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/txt_family_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_name"
+                    android:layout_toLeftOf="@id/img_thumb"
+                    android:layout_toStartOf="@id/img_thumb"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:textColor="@color/color_primary"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txt_common_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@id/img_thumb"
+                    android:layout_toStartOf="@id/img_thumb"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:textColor="@color/normal_grey" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/default_card_padding"
+                android:layout_marginTop="@dimen/default_card_padding"
+                android:background="@color/color_primary_transparent" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/icon_tag"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    android:contentDescription="@string/label_uses"
+                    android:src="@drawable/ic_action_labels_dark" />
+
+                <ImageView
+                    android:id="@+id/icon_location"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@string/nearby_species"
+                    android:src="@drawable/ic_action_location_found"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    android:layout_width="@dimen/activity_vertical_margin"
+                    android:layout_height="@dimen/activity_vertical_margin"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@android:color/transparent"
+                    android:indeterminate="true" />
+
+                <TextView
+                    android:id="@+id/txt_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/icon_tag"
+                    android:layout_toEndOf="@id/icon_tag"
+                    android:layout_toLeftOf="@id/icon_location"
+                    android:layout_toRightOf="@id/icon_tag"
+                    android:layout_toStartOf="@id/icon_location"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="@dimen/text_card_footer" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

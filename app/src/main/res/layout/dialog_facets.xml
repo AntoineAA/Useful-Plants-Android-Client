@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btn_sort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/default_card_padding"
+        android:layout_marginLeft="@dimen/default_card_padding"
+        android:layout_marginRight="@dimen/default_card_padding"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/button_sort"
+        android:padding="@dimen/default_card_padding"
+        android:src="@drawable/ic_menu_sort_by_size" />
+
+    <EditText
+        android:id="@+id/edit_search_facets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/default_card_padding"
+        android:layout_marginLeft="@dimen/default_card_padding"
+        android:layout_marginRight="@dimen/default_card_padding"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_toLeftOf="@id/btn_sort"
+        android:layout_toStartOf="@id/btn_sort"
+        android:drawableLeft="@drawable/ic_action_search_dark"
+        android:drawableStart="@drawable/ic_action_search_dark"
+        android:hint="@string/action_search"
+        android:inputType="text"
+        android:textColor="@color/dark_grey" />
+
+    <ListView
+        android:id="@+id/list_facets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/edit_search_facets" />
+
+</RelativeLayout>
